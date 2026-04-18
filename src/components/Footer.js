@@ -58,7 +58,7 @@ export default function Footer() {
       </motion.div>
 
       <div className="footerBottom">
-        <div className="footerCopy">© 2025 Janeen. All rights reserved. | Not financial advice.</div>
+        <div className="footerCopy">© 2026 Janeen. All rights reserved. | Not financial advice.</div>
         <div className="footerDisc">
           <em>Trading involves risk. Signals are for educational purposes only.</em>
         </div>

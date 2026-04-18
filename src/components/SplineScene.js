@@ -36,7 +36,7 @@ export default function SplineScene() {
         </div>
       )}
 
-      <Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" onLoad={() => setLoaded(true)} />
+      {/* <Spline scene="https://prod.spline.design/2fzdsSVagfszNxsd/scene.splinecode" onLoad={() => setLoaded(true)} /> */}
     </motion.div>
   );
 }
