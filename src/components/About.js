@@ -54,7 +54,7 @@ export default function About() {
           <div ref={ref} className="aboutStats">
             <div className="glass statCard">
               <div className="statNumber">
-                {inView ? <CountUp end={10000} duration={1.6} separator="," /> : '0'}
+                {inView ? <CountUp end={155000} duration={1.6} separator="," /> : '0'}
                 <span className="statPlus">+</span>
               </div>
               <div className="statLabel">Followers</div>

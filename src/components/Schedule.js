@@ -17,7 +17,7 @@ const ACTIVE = new Set([1, 3, 5, 6]); // Mon, Wed, Fri, Sat
 const START_HOUR = 20; // 8 PM
 const START_MIN = 0;
 const END_TEXT = '8:00 PM – 10:00 PM';
-const TIKTOK_PROFILE_URL = 'https://www.tiktok.com/@YOUR_TIKTOK';
+const TIKTOK_PROFILE_URL = 'https://www.tiktok.com/@janeen16';
 
 function nextLiveDate(now = new Date()) {
   const candidate = new Date(now);

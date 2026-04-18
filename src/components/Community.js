@@ -4,9 +4,6 @@ import { FaDownload, FaWhatsapp, FaChartBar } from 'react-icons/fa';
 import CountUp from 'react-countup';
 import { fadeUpVariants, staggerContainer, glowPulse } from '../hooks/useScrollAnimation';
 
-const EXNESS_LINK = 'https://example.com/exness-referral';
-const WHATSAPP_CHANNEL = 'https://wa.me/0000000000';
-
 const STEPS = [
   {
     title: 'Install Exness',
@@ -30,6 +27,31 @@ export default function Community() {
     <section id="community" className="section communitySection">
       <div className="communityBg" />
       <div className="container communityInner">
+        <div className="floatingWrap">
+          <motion.div
+            className="floatingCount glass"
+            animate={glowPulse}
+            aria-label="Profile image placeholder"
+          >
+            <img
+              src="qrcode.png"
+              alt="Qr Code"
+              className="floatingAvatarImg"
+            />
+          </motion.div>
+
+          <motion.div
+            className="floatingCount glass"
+            animate={glowPulse}
+            aria-label="Members joined counter"
+          >
+            <div className="floatingNum">
+              <CountUp end={500} duration={2.2} />+
+            </div>
+            <div className="floatingLabel">Members Joined</div>
+          </motion.div>
+        </div>
+
         <motion.div
           variants={fadeUpVariants}
           initial="hidden"
@@ -92,22 +114,13 @@ export default function Community() {
           </motion.a>
         </motion.div>
 
-        <motion.div
-          className="floatingCount glass"
-          animate={glowPulse}
-          aria-label="Members joined counter"
-        >
-          <div className="floatingNum">
-            <CountUp end={500} duration={2.2} />+
-          </div>
-          <div className="floatingLabel">Members Joined</div>
-        </motion.div>
       </div>
 
       <style>{`
         .communitySection{
           position: relative;
           overflow: hidden;
+          isolation: isolate;
         }
         .communityBg{
           position:absolute;
@@ -117,6 +130,7 @@ export default function Community() {
           animation: gradMove 10s ease-in-out infinite;
           opacity: 0.9;
           pointer-events:none;
+          z-index: 0;
         }
         @keyframes gradMove{
           0%,100%{ transform: translate3d(-2%, -2%, 0) rotate(0deg); }
@@ -124,6 +138,17 @@ export default function Community() {
         }
         .communityInner{
           position: relative;
+          z-index: 1;
+          padding-top: 88px;
+        }
+        .floatingWrap{
+          position: absolute;
+          right: 18px;
+          top: 18px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          z-index: 2;
         }
         .cTitle{
           font-family: var(--font-display);
@@ -187,10 +212,14 @@ export default function Community() {
           padding: 14px 20px;
           font-size: 1rem;
         }
+       .floatingAvatarImg{
+          width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: contain;
+          border-radius: inherit;
+        }
         .floatingCount{
-          position:absolute;
-          right: 18px;
-          top: 18px;
           padding: 14px 14px;
           border-color: rgba(255,255,255,0.14);
           text-align:center;
@@ -205,11 +234,29 @@ export default function Community() {
           font-weight: 700;
           font-size: 0.92rem;
         }
+        @media (max-width: 1080px){
+          .communityInner{
+            padding-top: 0;
+          }
+          .floatingWrap{
+            position: static;
+            margin: 0 0 18px auto;
+            width: fit-content;
+          }
+          .floatingCount{
+            width: fit-content;
+          }
+        }
         @media (max-width: 900px){
           .cSteps{ grid-template-columns: 1fr; }
+          .floatingWrap{
+            margin: 0 0 18px;
+          }
+          .floatingAvatar{
+            width: 60px;
+            height: 60px;
+          }
           .floatingCount{
-            position: static;
-            margin-top: 18px;
             width: fit-content;
           }
         }
@@ -217,4 +264,3 @@ export default function Community() {
     </section>
   );
 }
-
