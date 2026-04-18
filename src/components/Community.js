@@ -8,7 +8,7 @@ const STEPS = [
   {
     title: 'Install Exness',
     Icon: FaDownload,
-    desc: "Download and register via Janeen's referral link (placeholder link).",
+    desc: "Download and register via Janeen's referral link 👇",
   },
   {
     title: 'Message Janeen',
