@@ -69,7 +69,7 @@ export default function Community() {
           viewport={{ once: true, amount: 0.25 }}
         >
           <motion.a
-            href={EXNESS_LINK}
+            href="https://one.exnessonelink.com/a/3shaweu8jk"
             target="_blank"
             rel="noreferrer"
             className="btn btn-primary cBtn"
@@ -80,7 +80,7 @@ export default function Community() {
             Install Exness Now
           </motion.a>
           <motion.a
-            href={WHATSAPP_CHANNEL}
+            href="https://www.whatsapp.com/channel/0029Vb7GtAaDp2Q7hYRrKu1I"
             target="_blank"
             rel="noreferrer"
             className="btn btn-green cBtn"

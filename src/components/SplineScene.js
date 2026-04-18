@@ -6,7 +6,11 @@ export default function SplineScene() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none' }}>
+    <motion.div
+      style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 0 }}
+      animate={{ y: [0, -10, 0], scale: [1, 1.015, 1] }}
+      transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+    >
       {!loaded && (
         <div
           style={{
@@ -33,7 +37,7 @@ export default function SplineScene() {
       )}
 
       <Spline scene="https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode" onLoad={() => setLoaded(true)} />
-    </div>
+    </motion.div>
   );
 }
 

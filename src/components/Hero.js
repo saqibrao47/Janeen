@@ -3,6 +3,7 @@ import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { FaTiktok, FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa';
 import FloatingGlobe from './FloatingGlobe';
+import SplineScene from './SplineScene';
 import { useTypewriter } from '../hooks/useScrollAnimation';
 
 const SOCIAL = [
@@ -18,6 +19,7 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <div className="bg-accent" />
+      <SplineScene />
       <FloatingGlobe />
 
       <div className="container heroInner">

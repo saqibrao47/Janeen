@@ -5,8 +5,8 @@ import { FaTiktok, FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa';
 import { fadeUpVariants } from '../hooks/useScrollAnimation';
 
 const SOCIAL = [
-  { label: 'TikTok', Icon: FaTiktok, href: 'https://www.tiktok.com/@YOUR_TIKTOK' },
-  { label: 'WhatsApp', Icon: FaWhatsapp, href: 'https://wa.me/0000000000' },
+  { label: 'TikTok', Icon: FaTiktok, href: 'https://www.tiktok.com/@janeen16' },
+  { label: 'WhatsApp', Icon: FaWhatsapp, href: 'https://www.whatsapp.com/channel/0029Vb7GtAaDp2Q7hYRrKu1I' },
   { label: 'Instagram', Icon: FaInstagram, href: 'https://instagram.com/YOUR_INSTAGRAM' },
   { label: 'YouTube', Icon: FaYoutube, href: 'https://youtube.com/@YOUR_YOUTUBE' },
 ];

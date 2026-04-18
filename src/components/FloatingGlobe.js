@@ -53,7 +53,7 @@ export default function FloatingGlobe() {
             enablePan={false}
             enableRotate={false}
             autoRotate
-            autoRotateSpeed={0.6}
+            autoRotateSpeed={1.2}
           />
         </Canvas>
       </Suspense>
