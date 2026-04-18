@@ -20,7 +20,7 @@ export default function About() {
           <div className="aboutPhotoFrame">
             <img
               src="jeneenimg.png"
-              alt="Janeen Image"
+              alt="Janeen"
               className="aboutPhoto"
               loading="lazy"
             />
@@ -150,4 +150,3 @@ export default function About() {
     </section>
   );
 }
-
