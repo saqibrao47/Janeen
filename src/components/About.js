@@ -39,7 +39,7 @@ export default function About() {
           </h2>
 
           <p className="muted">
-            I’m <strong>Janeen</strong> — a Forex Trader, TikTok Live Host, and Exness Affiliate focused on helping
+            I’m <strong>Janeen</strong> a professional Forex Trader, TikTok Live Host + Gifter, and Exness Affiliate focused on helping
             everyday traders build clarity and confidence in the markets.
           </p>
           <p className="muted">

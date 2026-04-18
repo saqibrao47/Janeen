@@ -91,7 +91,7 @@ export default function Hero() {
       <style>{`
         .hero{
           position: relative;
-          min-height: 75vh;
+          min-height: 80vh;
           display:flex;
           align-items:center;
           padding: 120px 5% 80px;
