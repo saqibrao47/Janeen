@@ -142,7 +142,7 @@ export default function Community() {
           padding-top: 88px;
         }
         .floatingWrap{
-          position: absolute;
+          
           right: 18px;
           top: 18px;
           display: flex;
@@ -212,7 +212,12 @@ export default function Community() {
           padding: 14px 20px;
           font-size: 1rem;
         }
-       .floatingAvatarImg{
+        .floatingAvatar{
+          padding: 14px 14px;
+          border-color: rgba(255,255,255,0.14);
+          text-align:center;
+        }
+        .floatingAvatarImg{
           width: 100%;
           height: 100%;
           display: block;
