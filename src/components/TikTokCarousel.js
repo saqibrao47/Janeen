@@ -14,6 +14,14 @@ const MANUAL_TIKTOK_LINKS = [
     title: 'Live breakdown clip',
   },
   {
+    url: 'https://www.tiktok.com/@janeen16/video/7619551511495838997',
+    title: 'Learn to trade',
+  },
+  {
+    url: 'https://www.tiktok.com/@janeen16/video/7610927212543413525',
+    title: 'Learn to trade',
+  },
+  {
     url: 'https://www.tiktok.com/@janeen16/video/7629101079837363477',
     title: 'Quick strategy tip',
   },

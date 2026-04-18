@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaStar } from 'react-icons/fa';
 import { fadeUpVariants } from '../hooks/useScrollAnimation';
@@ -21,9 +21,8 @@ export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [perView, setPerView] = useState(() => (window.innerWidth < 820 ? 1 : 2));
-  const intervalRef = useRef(null);
 
-  const pages = useMemo(() => Math.ceil(TESTIMONIALS.length / perView), [perView]);
+  const pages = useMemo(() => Math.max(1, Math.ceil(TESTIMONIALS.length / perView)), [perView]);
 
   useEffect(() => {
     const onResize = () => setPerView(window.innerWidth < 820 ? 1 : 2);
@@ -33,14 +32,19 @@ export default function Testimonials() {
   }, []);
 
   useEffect(() => {
-    if (paused) return;
-    intervalRef.current = setInterval(() => {
+    if (paused || pages <= 1) return undefined;
+    const timer = setInterval(() => {
       setIndex((i) => (i + 1) % pages);
     }, 3000);
-    return () => clearInterval(intervalRef.current);
+    return () => clearInterval(timer);
   }, [paused, pages]);
 
-  const translatePct = index * 100;
+  useEffect(() => {
+    setIndex((i) => Math.min(i, pages - 1));
+  }, [pages]);
+
+  // Translate is relative to full track width, so scale by page count.
+  const translatePct = (index * 100) / pages;
 
   return (
     <section id="testimonials" className="section">
