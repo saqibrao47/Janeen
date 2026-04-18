@@ -7,6 +7,7 @@ const Hero = lazy(() => import('./components/Hero'));
 const About = lazy(() => import('./components/About'));
 const Services = lazy(() => import('./components/Services'));
 const Schedule = lazy(() => import('./components/Schedule'));
+const TikTokCarousel = lazy(() => import('./components/TikTokCarousel'));
 const Testimonials = lazy(() => import('./components/Testimonials'));
 const Community = lazy(() => import('./components/Community'));
 const Footer = lazy(() => import('./components/Footer'));
@@ -113,6 +114,9 @@ export default function App() {
         </Suspense>
         <Suspense fallback={suspenseFallback}>
           <Schedule />
+        </Suspense>
+        <Suspense fallback={suspenseFallback}>
+          <TikTokCarousel />
         </Suspense>
         <Suspense fallback={suspenseFallback}>
           <Testimonials />

@@ -19,7 +19,7 @@ export default function About() {
         >
           <div className="aboutPhotoFrame">
             <img
-              src="https://picsum.photos/600/600"
+              // src="https://picsum.photos/600/600"
               alt="Janeen"
               className="aboutPhoto"
               loading="lazy"
