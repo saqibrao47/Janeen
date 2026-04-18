@@ -21,7 +21,7 @@ function GlobeMesh() {
 
   return (
     <mesh ref={meshRef} geometry={geometry}>
-      <meshBasicMaterial color="#C9A84C" wireframe />
+      <meshBasicMaterial color="#e7b221" wireframe />
     </mesh>
   );
 }
