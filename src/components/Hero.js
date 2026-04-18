@@ -91,7 +91,7 @@ export default function Hero() {
       <style>{`
         .hero{
           position: relative;
-          min-height: 100vh;
+          min-height: 75vh;
           display:flex;
           align-items:center;
           padding: 120px 5% 80px;
@@ -166,7 +166,7 @@ export default function Hero() {
         }
         @media (max-width: 768px){
           .hero{
-            padding: 110px 4% 70px;
+            padding: 110px 4% 0px;
           }
         }
       `}</style>
